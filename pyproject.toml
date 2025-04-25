@@ -1,0 +1,20 @@
+[project]
+name = "dspy-qdrant"
+version = "0.1.3"
+description = "Qdrant powered retriever for DSPy"
+readme = "README.md"
+authors = [
+    { name = "Anush008", email = "anush.shett@qdrant.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "dspy",
+    "qdrant-client>=1.14.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources]
+dspy = { git = "https://github.com/TomeHirata/dspy", branch = "remove-retrievers" }
